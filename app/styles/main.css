@@ -1,9 +1,82 @@
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+/*
+.about {
+  background: url(/images/jump.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+.aboutText, .goals, .odd{
+  background-color: #dae6f6;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width:100%;
 }
-
+.history, .even{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width:100%;
+}
+.about h2, .about h3{
+  color:white;
+  text-shadow: 2px 2px black;
+}
+.about{
+  position:absolute;
+  text-align: right;
+}
+.blog{
+  width:100%;
+  display:block;
+  position:absolute;
+  height:500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #dae6f6;
+  text-align: center;
+}
+.users {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 500px;
+  text-align: center;
+  vertical-align: middle;
+}
+.first{
+  text-align:center;
+  color:white;
+  background-color:#6666FF;
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.first h3{
+  text-align:right;
+}
+.first .btn{
+  vertical-align:left;
+}
+.second{
+  
+}
+.second h3{
+  text-align:left;
+}
+.second .btn{
+  vertical-align:right;
+}
+.img-blog{
+  max-width:200px;
+  max-height:200px;
+}
+.img-user{
+  max-width:200px;
+  max-height:200px;
+}
+.center{
+  text-align:center;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -13,15 +86,15 @@ body {
 }
 
 /* Custom page header */
-.header {
+/*.header {
   border-bottom: 1px solid #e5e5e5;
-}
+}*/
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  padding-bottom: 19px;
+  /*padding-bottom: 19px;*/
 }
 
 /* Custom page footer */
@@ -31,49 +104,42 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
+/* Larger than mobile */
+@media (min-width: 400px) {
+  .about{
+    top:50px;
+    right:10px;
   }
 }
-.container-narrow > hr {
-  margin: 30px 0;
-}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .about{
+    top:70px;
+    right:20px;
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .about{
+    top:100px;
+    right:50px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .about{
+    top:125px;
+    right:75px;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  .about{
+    top:150px;
+    right:100px;
   }
 }

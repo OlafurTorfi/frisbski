@@ -28,6 +28,10 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      }).
+      when('/rules', {
+        templateUrl: 'views/rules.html',
+        controller: 'RulesCtrl'
       })
       .otherwise({
         redirectTo: '/'
