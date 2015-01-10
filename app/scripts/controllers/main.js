@@ -8,7 +8,7 @@
  * Controller of the frisbskiApp
  */
 angular.module('frisbskiApp')
-  .controller('MainCtrl', ['$scope', '$sce', function ($scope, $sce) {
+  .controller('MainCtrl', ['$scope', '$sce', '$location', function ($scope, $sce, $location) {
       $scope.blogs = [{
                   title:'Bláfjöll 3.1.2015 compilation',
                   text:'This is a picture showing my beautiful self',
@@ -45,7 +45,12 @@ angular.module('frisbskiApp')
                   image:'images/SettingUpCamera.jpg',
                   footer:'co-creator of Frisbski'
             }];*/
-            
+      $scope.goToAbout = function(){
+            $location.path( 'about' );
+      };
+      $scope.goToRules = function(){
+            $location.path( 'rules' );
+      };
       $scope.setPost = function(post){
             $scope.post = post;
       };
