@@ -1,7 +1,13 @@
 {
   "name": "frisbski",
-  "version": "0.0.0",
-  "dependencies": {},
+  "version": "1.0.0",
+  "author": "OlafurTorfi",
+  "description": "Official Home of Frisbski",
+  "main": "web.js",
+  "dependencies": {
+    "express": "^4.10.7",
+    "gzippo": "^0.2.0"
+    },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",

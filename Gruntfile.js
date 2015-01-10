@@ -240,7 +240,8 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>/images',
           src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/images'
+          dest: '<%= yeoman.dist %>/images',
+          cache: false
         }]
       }
     },
@@ -327,6 +328,18 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      heroku: {
+        expand:true,
+        src: ['Procfile',
+              'web.js'],
+        dest: '<%= yeoman.dist %>'
+      },
+      images: {
+        expand: true,
+        //cwd: '<%= yeoman.app %>/images',
+        src: 'app/images/jump.jpg',
+        dest: '<%= yeoman.dist %>/images'
       }
     },
 
@@ -340,7 +353,7 @@ module.exports = function (grunt) {
       ],
       dist: [
         'copy:styles',
-        'imagemin',
+        //'imagemin',
         'svgmin'
       ]
     },
@@ -382,9 +395,9 @@ module.exports = function (grunt) {
     'connect:test',
     'karma'
   ]);
-
   grunt.registerTask('build', [
     'clean:dist',
+    'copy:images',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
@@ -392,6 +405,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
+    'copy:heroku',
     'cdnify',
     'cssmin',
     'uglify',
