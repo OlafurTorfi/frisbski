@@ -1,10 +1,8 @@
 'use strict';
-var express = require('express'), http = require('http'), gzippo = require('gzippo');
+var express = require('express'), http = require('http');
 
 var app = express();
-app.use(gzippo.staticGzip(__dirname + '/app'));
-app.use(express.static(__dirname + '/app'));
-//app.get('/',express.static('/app/index.html'));
+app.use(express.static('' + __dirname));
 
 var server = http.createServer(app);
 server.listen(process.env.PORT || 5000);
