@@ -332,13 +332,14 @@ module.exports = function (grunt) {
       heroku: {
         expand:true,
         src: ['Procfile',
-              'web.js'],
+              'web.js',
+              'package.json'],
         dest: '<%= yeoman.dist %>'
       },
       images: {
         expand: true,
-        //cwd: '<%= yeoman.app %>/images',
-        src: 'app/images/jump.jpg',
+        cwd: 'app/images/',
+        src: 'jump.jpg',
         dest: '<%= yeoman.dist %>/images'
       }
     },
