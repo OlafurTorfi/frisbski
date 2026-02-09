@@ -3,39 +3,32 @@
   "version": "1.0.0",
   "author": "OlafurTorfi",
   "description": "Official Home of Frisbski",
+  "private": true,
+  "type": "module",
   "main": "web.js",
   "dependencies": {
-    "express": "^4.10.7"
-    },
+    "@fontsource-variable/space-grotesk": "^5.2.6",
+    "express": "^5.1.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
+  },
   "devDependencies": {
-    "grunt": "^0.4.1",
-    "grunt-autoprefixer": "^0.7.3",
-    "grunt-concurrent": "^0.5.0",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-connect": "^0.7.1",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-cssmin": "^0.9.0",
-    "grunt-contrib-htmlmin": "^0.3.0",
-    "grunt-contrib-imagemin": "^0.8.1",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-filerev": "^0.2.1",
-    "grunt-google-cdn": "^0.4.0",
-    "grunt-newer": "^0.7.0",
-    "grunt-ng-annotate": "^0.4.0",
-    "grunt-svgmin": "^0.4.0",
-    "grunt-usemin": "^2.1.1",
-    "grunt-wiredep": "^1.7.0",
-    "jshint-stylish": "^0.2.0",
-    "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.3.1"
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^26.0.0",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.6"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=20"
   },
   "scripts": {
-    "test": "grunt test"
-  }
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node web.js",
+    "heroku-postbuild": "npm run build",
+    "test": "vitest run"
+  },
+  "license": "UNLICENSED"
 }
