@@ -2,3 +2,9 @@ node_modules
 .tmp
 .sass-cache
 bower_components
+dist
+.DS_Store
+.env
+.env.*
+.vite
+coverage
